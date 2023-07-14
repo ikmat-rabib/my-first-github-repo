@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my first git repo</title>
+    <style>
+        /*internal style  */
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            border: 5px solid tomato;
+            border-radius: 10px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .box1 {
+            grid-area: box1;
+            background-color: aqua;
+        }
+
+        .box2 {
+            background-color: orange;
+            grid-area: box2;
+        }
+
+        .box3 {
+            grid-area: box3;
+            background-color: darkred;
+            color: bisque;
+        }
+
+        .box4 {
+            grid-area: box4;
+            background-color: darkgreen;
+            color: bisque;
+        }
+
+        .container {
+            display: grid;
+            width: 100%;
+            margin: 0 auto;
+            border-color: rgba(207, 0, 41, 0.932);
+            grid-template-areas:
+
+                "box1 box1 box2 box2"
+                "box1 box1 box3 box4"
+            ;
+        }
+
+        @media screen and (max-width: 576px) {
+            .container {
+
+                border-color: rgb(224, 8, 224);
+                grid-template-areas:
+                    "box1"
+                    "box2"
+                    "box3"
+                    "box4";
+            }
+
+        }
+    </style>
 </head>
-<body>
-    
+
+<body class="container">
+
+    <!-- media query practice task 2 -->
+    <div class="box1">
+        <h3>box 1</h3>
+    </div>
+    <div class="box2">
+        <h3>box 2</h3>
+    </div>
+    <div class="box3">
+        <h3>box 3</h3>
+    </div>
+    <div class="box4">
+        <h3>box 4</h3>
+    </div>
+
 </body>
+
 </html>
